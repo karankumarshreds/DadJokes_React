@@ -1,0 +1,95 @@
+.JokeList {
+    display: flex;
+    width: 80%; 
+    height: 80%;
+}
+
+.JokeList-sidebar {   
+    background-color: #9575cd;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    width: 30%;
+    box-shadow: 8px 10px 12px -3px rgba(0,0,0,0.75);
+    z-index: 2;
+}
+
+.JokeList-sidebar img {
+    width: 40%;
+    box-shadow: 8px 10px 12px -3px rgba(0,0,0,0.75);
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.JokeList-sidebar img:hover {
+    filter: brightness(1.05);
+    cursor: pointer;
+    animation-name: spin;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.JokeList-title {
+    font-size: 4rem ;
+    margin: 1.5rem 2rem;
+    color: white;
+    font-weight: 300;
+}
+.JokeList-title span {
+    font-weight: 700;
+}
+.JokeList-jokes {
+    height: 90%;
+    width: 70%;
+    background-color: white;
+    align-self: center;
+    box-shadow: 8px 10px 12px -3px rgba(0,0,0,0.75);
+    overflow: scroll;
+}
+
+.JokeList-sidebar button {
+    background: linear-gradient(
+    135deg,
+    rgba(179, 229, 252, 1) 0%,
+    rgba(179, 229, 252, 1) 50%,
+    rgba(240, 98, 146, 1) 50%,
+    rgba(240, 98, 146, 1) 100%
+  );
+  border: none;
+  outline: none;
+  padding: 1rem;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 8px 10px 12px -3px rgba(0,0,0,0.45);
+  cursor: pointer;
+  font-size: larger;
+}
+.JokeList-sidebar button:hover{
+    filter: brightness(1.05);
+}
+.Loading {
+    position: relative;
+    /* margin: 10rem; */
+    justify-self: center;
+    font-size: 4rem;
+    animation-name: example;
+    animation-duration: 5s;
+}
+@keyframes example {
+    0%   {color:red; left:100px; top:100px;}
+    25%  {color:yellow; left:200px; top:100px;}
+    50%  {color:blue; left:200px; top:200px;}
+    75%  {color:green; left:100px; top:200px;}
+    100% {color:red; left:100px; top:100px;}
+  }
